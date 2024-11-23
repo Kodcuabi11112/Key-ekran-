@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>BULL X</title> 
+  <link rel="stylesheet" href="styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap" rel="stylesheet"> <!-- Uzaylı tarzı font --> 
+ <style type="text/css" id="dcoder_stylesheet">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Orbitron', sans-serif; /* Uzaylı yazı tipi */
+    color: #F5F5F5; /* Genel yazı rengi soluk mavi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://media.giphy.com/media/rOL98W0AQDiUvvkT3z/giphy.gif') no-repeat center center fixed; /* Arka plan GIF */
+    background-size: cover; /* Arka plan boyutu */
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    width: 400px; /* Genişlik ayarlandı */
+    background-color: transparent; /* Tam saydam arka plan */
+    border-radius: 15px; /* Kenar yuvarlama */
+}
+
+h1 {
+    font-size: 28px; /* Başlık boyutu */
+    font-weight: bold;
+    color: #F5F5F5; /* Koyu lacivert rengi */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Büyük harf yapıldı */
+    letter-spacing: 3px; /* Harf aralığı artırıldı */
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 50px; /* Daha fazla boşluk */
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.5); /* Kırmızı tonlu arka plan */
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0px 2px 8px rgba(255, 0, 0, 0.5);
+    font-family: 'Orbitron', sans-serif; /* Giriş kutusu yazı tipi */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 48%; /* Buton genişliği */
+    padding: 15px; /* Buton boyutu küçültüldü */
+    font-size: 16px; /* Yazı boyutu küçültüldü */
+    background-color: rgba(255, 0, 0, 0.5); /* Kırmızı tonlu buton arka planı */
+    color: #F5F5F5; /* Soluk mavi */
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* Oval kenar yapısı */
+    transition: transform 0.3s ease; /* Geçiş efektleri */
+    font-family: 'Orbitron', sans-serif; /* Buton yazı tipi */
+}
+
+.button:hover {
+    transform: translateY(-5px); /* Hoverda yukarı hareket */
+}
+
+.support {
+    margin-top: 20px; /* Destek yazısı için alan azaltıldı */
+}
+
+.support a {
+    color: #F5F5F5; /* Koyu lacivert */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.support a:hover {
+    text-decoration: underline;
+}</style></head> 
+ <body> 
+  <div class="container"> 
+   <h1>WELCOME BULL X MINER!</h1> 
+   <input type="password" id="key-input" placeholder="×××××××××××××××××××"> 
+   <div class="buttons"> <button class="button" id="login-btn" onclick="login()">LOGIN</button> <button class="button" id="buy-btn" onclick="buyAccess()">Buy access</button> 
+   </div> 
+   <p class="support"><a href="t.me/D_admin_D00" target="_blank">X-Support-X</a></p> 
+  </div> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">function login() {
+    const keyInput = document.getElementById('key-input').value;
+    const correctKeys = [
+        "BULL:SKII2MOWMOEKÖ",
+        "BULL:KDLLSLSMMSKLL",
+        "BULL:KEKKEKÖÖSJMW",
+        "BULL:KSKSLMSKAÖKAK",
+        "BULL:UEKEÖSKMSIEMS",
+        "BULL:JEI2KEKEKSKSIELW",
+        "bullreal"
+    ];
+
+    if (correctKeys.includes(keyInput)) {
+        
+        showIntroGif();
+
+        // GIF bitince yönlendirme yapılacak
+    } else {
+        // Yanlış şifre mesajı
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = "wrong bull password !";
+        errorMessage.style.color = "red";
+        errorMessage.style.fontSize = "16px";
+        errorMessage.style.marginTop = "10px";
+        document.querySelector('.container').appendChild(errorMessage);
+    }
+}
+
+function showIntroGif() {
+    // Tüm içeriği gizle
+    document.querySelector('.container').style.display = 'none';
+
+    // Yeni bir div oluştur ve intro GIF'ini göster
+    const introDiv = document.createElement('div');
+    introDiv.id = 'intro-screen';
+    introDiv.style.position = 'fixed';
+    introDiv.style.top = '0';
+    introDiv.style.left = '0';
+    introDiv.style.width = '100%';
+    introDiv.style.height = '100%';
+    introDiv.style.backgroundColor = 'black';
+    introDiv.style.display = 'flex';
+    introDiv.style.justifyContent = 'center';
+    introDiv.style.alignItems = 'center';
+
+    // GIF elementi oluştur
+    const introGif = document.createElement('img');
+    introGif.src = 'https://media.giphy.com/media/yZ44CN6nk9iSHu2Vp1/giphy.gif'; // GIF dosyasının linki
+    introGif.style.width = '100%';
+    introGif.style.height = 'auto';
+
+    // GIF'i ekranın ortasında göster
+    introDiv.appendChild(introGif);
+    document.body.appendChild(introDiv);
+
+    // GIF bittiğinde yönlendirme yap
+    setTimeout(function() {
+        window.location.href = "https://kodcuabi11112.github.io/Ana-Coin-ekran/"; // Belirtilen linke yönlendir
+    }, 5000); // GIF'in süresi kadar beklemek için (örneğin 6 saniye)
+}</script></body></html>
